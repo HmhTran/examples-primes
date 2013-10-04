@@ -35,24 +35,24 @@ public class printPrimes {
       int n;
       int primeMultiples[] = new int[maxOrder + 1];
 
-      int number = 1;
+      int x = 1;
       int order = 2;
       int squaredPrime = 9;
 
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
         do {
-          number = number + 2;
-          if (number == squaredPrime) {
+          x = x + 2;
+          if (x == squaredPrime) {
             order = order + 1;
             squaredPrime = listOfPrimes[order] * listOfPrimes[order];
-            primeMultiples[order - 1] = number;
+            primeMultiples[order - 1] = x;
           }
           n = 2;
           isPrime = true;
           while (n < order && isPrime) {
-            while (primeMultiples[n] < number)
+            while (primeMultiples[n] < x)
               primeMultiples[n] = primeMultiples[n] + listOfPrimes[n] + listOfPrimes[n];
-            if (primeMultiples[n] == number)
+            if (primeMultiples[n] == x)
               isPrime = false;
             n = n + 1;
           }
