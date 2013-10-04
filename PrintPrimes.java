@@ -15,7 +15,7 @@ public class printPrimes {
 
 
   public static void main(String[] args) {
-      printPrimes printPrimes = new printPrimes(300, 50, 4, 10, 30);
+      printPrimes example = new printPrimes(300, 50, 4, 10, 30);
       printPrimes.calculatePrimes();
       printPrimes.printPrimes();
   }
