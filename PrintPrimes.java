@@ -70,8 +70,8 @@ public class PrintPrimes {
           System.out.println("");
           for (int rowOffset = pageOffset; rowOffset < pageOffset + rows; rowOffset++){
             for (int i = 0; i < columns;i++)
-              if (rowOffset + columns * rows <= numberOfPrimes)
-                System.out.format("%10d", listOfPrimes[rowOffset + columns * rows]);
+              if (rowOffset + i * rows <= numberOfPrimes)
+                System.out.format("%10d", listOfPrimes[rowOffset + i * rows]);
             System.out.println("");
           }
           System.out.println("\f");
