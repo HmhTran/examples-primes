@@ -61,7 +61,7 @@ public class printPrimes {
       }
     }
 
-    public void printPrimes() {
+    public void printPages() {
         int PAGENUMBER = 1;
         int PAGEOFFSET = 1;
         while (PAGEOFFSET <= numberOfPrimes) {
