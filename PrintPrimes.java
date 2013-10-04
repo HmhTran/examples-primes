@@ -31,13 +31,13 @@ public class printPrimes {
   }
 
   private void calculateOddPrimes() {
-      boolean JPRIME;
-      int N;
-      int MULT[] = new int[maxOrder + 1];
+      boolean isPrime;
+      int n;
+      int primeMultiples[] = new int[maxOrder + 1];
 
-      int J = 1;
-      int ORD = 2;
-      int SQUARE = 9;
+      int number = 1;
+      int order = 2;
+      int squaredPrime = 9;
 
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
         do {
