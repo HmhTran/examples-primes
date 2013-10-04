@@ -1,4 +1,4 @@
-public class PrintPrimes {
+public class printPrimes {
   int numberOfPrimes;
   int RR;
   int CC;
