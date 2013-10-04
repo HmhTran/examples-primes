@@ -78,7 +78,7 @@ public class PrintPrimes {
           System.out.println("");
           
           for (int rowOffset = pageOffset; rowOffset < pageOffset + rows; rowOffset++){
-            for (int n = 0; n < columns;n++)
+            for (int n = 0; n < columns; n++)
               if (rowOffset + n * rows <= numberOfPrimes)
                 System.out.format("%10d", listOfPrimes[rowOffset + n * rows]);
             System.out.println("");
