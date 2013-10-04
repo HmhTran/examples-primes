@@ -1,9 +1,8 @@
 public class printPrimes {
   int numberOfPrimes;
-  int RR;
-  int CC;
-  int WW;
-  int ORDMAX;
+  int rows;
+  int colums;
+  int maxOrder;
   int listOfPrimes[];
 
   public PrintPrimes(int numberOfPrimes, int RR, int CC, int WW, int ORDMAX) {
