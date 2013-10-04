@@ -5,7 +5,7 @@ public class PrintPrimes {
   int maxOrder;
   int listOfPrimes[];
 
-  public void printPrimes(int numberOfPrimes, int rows, int columns, int maxOrder) {
+  public PrintPrimes(int numberOfPrimes, int rows, int columns, int maxOrder) {
     this.numberOfPrimes = numberOfPrimes;
     this.rows  = rows;
     this.columns  = columns;
@@ -15,7 +15,7 @@ public class PrintPrimes {
 
 
   public static void main(String[] args) {
-      PrintPrimes example = new printPrimes(300, 50, 4, 30);
+      PrintPrimes example = new PrintPrimes(300, 50, 4, 30);
       example.calculatePrimes();
       example.printPages();
   }
@@ -57,7 +57,7 @@ public class PrintPrimes {
             n = n + 1;
           }
         } while (!isPrime);
-        listOfPrimes[primesFoundSoFar] = number;
+        listOfPrimes[primesFoundSoFar] = x;
       }
     }
 
@@ -75,8 +75,8 @@ public class PrintPrimes {
             System.out.println("");
           }
           System.out.println("\f");
-          PAGENUMBER = PAGENUMBER + 1;
-          PAGEOFFSET = PAGEOFFSET + rows * columns;
+          pageNumber = pageNumber + 1;
+          pageOffset = pageOffset + rows * columns;
         }
     }
 }
