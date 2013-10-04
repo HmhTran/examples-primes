@@ -32,7 +32,7 @@ public class PrintPrimes {
 
   private void calculateOddPrimes() {
       boolean isPrime;
-      int n;
+      int i;
       int primeMultiples[] = new int[maxOrder + 1];
 
       int x = 1;
@@ -47,14 +47,14 @@ public class PrintPrimes {
             squaredPrime = listOfPrimes[order] * listOfPrimes[order];
             primeMultiples[order - 1] = x;
           }
-          n = 2;
+          i = 2;
           isPrime = true;
-          while (n < order && isPrime) {
-            while (primeMultiples[n] < x)
-              primeMultiples[n] = primeMultiples[n] + listOfPrimes[n] + listOfPrimes[n];
-            if (primeMultiples[n] == x)
+          while (i < order && isPrime) {
+            while (primeMultiples[i] < x)
+              primeMultiples[i] = primeMultiples[i] + listOfPrimes[i] + listOfPrimes[i];
+            if (primeMultiples[i] == x)
               isPrime = false;
-            n = n + 1;
+            i = i + 1;
           }
         } while (!isPrime);
         listOfPrimes[primesFoundSoFar] = x;
