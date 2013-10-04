@@ -42,21 +42,28 @@ public class PrintPrimes {
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
         do {
           x = x + 2;
+          
           if (x == squaredPrime) {
             order = order + 1;
             squaredPrime = listOfPrimes[order] * listOfPrimes[order];
             primeMultiples[order - 1] = x;
           }
-          i = 2;
+          
+          i = 2;          
           isPrime = true;
+          
           while (i < order && isPrime) {
             while (primeMultiples[i] < x)
               primeMultiples[i] = primeMultiples[i] + listOfPrimes[i] + listOfPrimes[i];
+            
             if (primeMultiples[i] == x)
               isPrime = false;
+           
             i = i + 1;
           }
-        } while (!isPrime);
+        } 
+        
+        while (!isPrime);        
         listOfPrimes[primesFoundSoFar] = x;
       }
     }
