@@ -5,7 +5,7 @@ public class PrintPrimes {
   int maxOrder;
   int listOfPrimes[];
 
-  public printPrimes(int numberOfPrimes, int rows, int columns, int maxOrder) {
+  public void printPrimes(int numberOfPrimes, int rows, int columns, int maxOrder) {
     this.numberOfPrimes = numberOfPrimes;
     this.rows  = rows;
     this.column  = columns;
