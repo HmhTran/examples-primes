@@ -41,23 +41,23 @@ public class printPrimes {
 
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
         do {
-          J = J + 2;
-          if (J == SQUARE) {
-            ORD = ORD + 1;
-            SQUARE = listOfPrimes[ORD] * listOfPrimes[ORD];
-            MULT[ORD - 1] = J;
+          number = number + 2;
+          if (number == squaredPrime) {
+            order = order + 1;
+            squaredPrime = listOfPrimes[order] * listOfPrimes[order];
+            primeMultiples[order - 1] = number;
           }
-          N = 2;
-          JPRIME = true;
-          while (N < ORD && JPRIME) {
-            while (MULT[N] < J)
-              MULT[N] = MULT[N] + listOfPrimes[N] + listOfPrimes[N];
-            if (MULT[N] == J)
-              JPRIME = false;
-            N = N + 1;
+          n = 2;
+          isPrime = true;
+          while (n < order && isPrime) {
+            while (primeMultiples[n] < number)
+              primeMultiples[n] = primeMultiples[n] + listOfPrimes[n] + listOfPrimes[n];
+            if (primeMultiples[n] == number)
+              isPrime = false;
+            n = n + 1;
           }
-        } while (!JPRIME);
-        listOfPrimes[primesFoundSoFar] = J;
+        } while (!isPrime);
+        listOfPrimes[primesFoundSoFar] = number;
       }
     }
 
