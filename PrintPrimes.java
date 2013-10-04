@@ -6,7 +6,7 @@ public class printPrimes {
   int listOfPrimes[];
 
   public printPrimes(int numberOfPrimes, int rows, int columns, int maxOrder) {
-    this.numberOfPrimes   = numberOfPrimes;
+    this.numberOfPrimes = numberOfPrimes;
     this.rows  = rows;
     this.column  = columns;
     this.maxOrder = maxOrder;
@@ -33,7 +33,7 @@ public class printPrimes {
   private void calculateOddPrimes() {
       boolean JPRIME;
       int N;
-      int MULT[] = new int[ORDMAX + 1];
+      int MULT[] = new int[maxOrder + 1];
 
       int J = 1;
       int ORD = 2;
@@ -68,15 +68,15 @@ public class printPrimes {
           System.out.println("The First " + numberOfPrimes +
                                " Prime Numbers --- Page " + PAGENUMBER);
           System.out.println("");
-          for (int ROWOFFSET = PAGEOFFSET; ROWOFFSET < PAGEOFFSET + RR; ROWOFFSET++){
-            for (int C = 0; C < CC;C++)
-              if (ROWOFFSET + C * RR <= numberOfPrimes)
-                System.out.format("%10d", listOfPrimes[ROWOFFSET + C * RR]);
+          for (int ROWOFFSET = PAGEOFFSET; ROWOFFSET < PAGEOFFSET + rows; ROWOFFSET++){
+            for (int C = 0; C < columns;C++)
+              if (ROWOFFSET + columns * rows <= numberOfPrimes)
+                System.out.format("%10d", listOfPrimes[ROWOFFSET + columns * rows]);
             System.out.println("");
           }
           System.out.println("\f");
           PAGENUMBER = PAGENUMBER + 1;
-          PAGEOFFSET = PAGEOFFSET + RR * CC;
+          PAGEOFFSET = PAGEOFFSET + rows * columns;
         }
     }
 }
