@@ -8,14 +8,14 @@ public class PrintPrimes {
   public void printPrimes(int numberOfPrimes, int rows, int columns, int maxOrder) {
     this.numberOfPrimes = numberOfPrimes;
     this.rows  = rows;
-    this.column  = columns;
+    this.columns  = columns;
     this.maxOrder = maxOrder;
     this.listOfPrimes = new int[numberOfPrimes + 1];
   }
 
 
   public static void main(String[] args) {
-      printPrimes example = new printPrimes(300, 50, 4, 30);
+      PrintPrimes example = new printPrimes(300, 50, 4, 30);
       example.calculatePrimes();
       example.printPages();
   }
